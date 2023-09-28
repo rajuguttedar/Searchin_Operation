@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        input{
+            border: 1px solid gray;
+            outline: none;
+            border-radius: 2px;
+        }
+
+        table  td, th{
+            width: 100px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="body">
+        <form>
+            <input type="search" id="searchProducts" size="59" style="height: 30px;" onkeyup="debounceProduct()"> 
+            <button id="filterButton" style="height: 33px;">search</button>
+        </form>
+        <div class="tableBody">
+            <table border="1px" align="center" cellspacing="0px">
+                <thead>
+                    <tr>
+                        <th>SI</th>
+                        <th>pname</th>
+                        <th>color</th>
+                        <th>price</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="./products.js"></script>
+</body>
+</html>
